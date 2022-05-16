@@ -19,9 +19,25 @@ body .main .container .row .logo-content .logo-button button {
   margin-right: 20px;
 }
 
-body .main-destination .container .row .destination-content .destination-logo {
+body .main-welcome .container .row .welcome-content .welcome-logo {
   font-size: 50px;
   margin-bottom: 30px;
+}
+
+body .main-welcome .container .row .welcome-content .welcome-text {
+  color: #757575;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+body .main-destination .container .row .destination-logo-content .destination-logo {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+body .main-destination .container .row .destination-logo-content, body .main-welcome .container .row .welcome-content {
+  text-align: center;
+  margin-top: 150px;
 }
 
 .container {
@@ -123,19 +139,8 @@ body .main .watch-intro-video .watch-intro-video-text .intro-video {
 body .main-welcome {
   height: 950px;
 }
-body .main-welcome .container .row .welcome-content {
-  text-align: center;
-  margin-top: 150px;
-}
-body .main-welcome .container .row .welcome-content .welcome-logo {
-  font-size: 50px;
-  margin-bottom: 30px;
-}
 body .main-welcome .container .row .welcome-content .welcome-text {
-  color: #757575;
-  margin: 0 auto;
   width: 70%;
-  font-size: 16px;
   line-height: 25px;
   margin-bottom: 100px;
 }
@@ -193,25 +198,24 @@ body .main-welcome .slider-welcome .slick-dots li.slick-active button:before {
 body .main-destination {
   height: 1345px;
 }
-body .main-destination .container .row .destination-content {
-  margin: 0 auto;
-  margin-top: 150px;
+body .main-destination .container .row .destination-logo-content {
+  width: 100%;
   margin-bottom: 85px;
 }
-body .main-destination .container .row .destination-content .destination-text {
+body .main-destination .container .row .destination-logo-content .destination-text {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
   margin-bottom: 70px;
 }
-body .main-destination .container .row .destination-content .destination-search {
+body .main-destination .container .row .destination-logo-content .destination-search {
   text-align: center;
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: 40px 85px;
 }
-body .main-destination .container .row .destination-content .destination-search .destination-search-text {
+body .main-destination .container .row .destination-logo-content .destination-search .destination-search-text {
   font-size: 21px;
   font-weight: 600;
   color: black;
@@ -261,9 +265,5 @@ body .main-destination .slider-destination .slick-prev:hover .slick-next:hover {
 body .main-destination .slider-destination .slick-prev:before, body .main-destination .slider-destination .slick-next:before {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 35px;
-  line-height: 1;
   color: #fbad27;
-  opacity: 0.75;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }/*# sourceMappingURL=style.css.map */

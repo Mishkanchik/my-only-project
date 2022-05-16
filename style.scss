@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+[class*="slider-content-"]{
+    margin-left: 50px;
+    margin-right: 20px;
+}
 %button-style{
     width: 225px;
     height: 50px;
@@ -12,15 +16,23 @@
     font-weight: bold;
     cursor: pointer;
 }
-[class*="slider-content-"]{
-    margin-left: 50px;
-    margin-right: 20px;
-}
 
-%main-logos-style{
+
+%logo-font-size-and-margin-botton{
     font-size: 50px;
     margin-bottom: 30px;
-    
+}
+%text-logo-style{
+    color: #757575;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+%content-150px-center{
+
+    text-align: center;
+    margin-top: 150px;
+
 }
 
 .container{
@@ -172,21 +184,16 @@ body{
                 .welcome-content{
 
                    
-                    text-align: center;
-                    margin-top: 150px;
+                    @extend %content-150px-center;
 
                     .welcome-logo{
 
-                        font-size: 50px;
-                        margin-bottom: 30px;
+                       @extend %logo-font-size-and-margin-botton;
 
                     }
                     .welcome-text{
-                       
-                        color: #757575;
-                        margin: 0 auto;
+                        @extend %text-logo-style;
                         width: 70%;
-                        font-size: 16px;
                         line-height: 25px;
                         margin-bottom: 100px;
                     }
@@ -295,22 +302,18 @@ body{
 
         .container{
             .row{
-                .destination-content{
-
-                    margin: 0 auto;
-                    margin-top: 150px;
+                .destination-logo-content{
+                    @extend %logo-150px-center;
+                    width: 100%;
                     margin-bottom: 85px;
 
                     .destination-logo{
-                        @extend  %main-logos-style;
+                        @extend %logo-font-size-and-margin-botton;
                         
                         
                     }
                     .destination-text{
-                        
-                        font-size: 20px;
-                        font-weight: 600;
-                        text-align: center;
+                        @extend %text-logo-style;
                         margin-bottom: 70px;
                     }
                     .destination-search{
@@ -385,11 +388,9 @@ body{
             .slick-prev:before, .slick-next:before {
                 font-family:Arial, Helvetica, sans-serif;
                 font-size: 35px;
-                line-height: 1;
                 color: #fbad27;
-                opacity: 0.75;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                
+                
             }
         }
 
