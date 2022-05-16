@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-body .main .container .row .logo-content .logo-button button {
+body .main-news .container .news-button button, body .main .container .row .logo-content .logo-button button {
   width: 225px;
   height: 50px;
   border: none;
@@ -19,9 +19,23 @@ body .main .container .row .logo-content .logo-button button {
   margin-right: 20px;
 }
 
-body .main-destination .container .row .destination-content .destination-logo {
+body .main-news .container .news-content, body .main-destination .container .row .destination-content {
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 85px;
+}
+
+body .main-news .container .news-content .news-text, body .main-destination .container .row .destination-content .destination-text {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 70px;
+  color: #757575;
+}
+
+body .main-news .container .news-content .news-logo, body .main-destination .container .row .destination-content .destination-logo {
   font-size: 50px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .container {
@@ -37,6 +51,32 @@ body .main-destination .container .row .destination-content .destination-logo {
   background-image: url(images/image1.jpg);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.grid-block-content {
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.grid-block-content .grid-block-content-logo {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.grid-block-content .grid-block-content-text {
+  font-size: 16px;
+  color: #757575;
+  line-height: 25px;
+}
+
+.grid-block-content-logo {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.grid-block-content-text {
+  font-size: 16px;
+  color: #757575;
+  line-height: 25px;
 }
 
 body {
@@ -193,17 +233,6 @@ body .main-welcome .slider-welcome .slick-dots li.slick-active button:before {
 body .main-destination {
   height: 1345px;
 }
-body .main-destination .container .row .destination-content {
-  margin: 0 auto;
-  margin-top: 150px;
-  margin-bottom: 85px;
-}
-body .main-destination .container .row .destination-content .destination-text {
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 70px;
-}
 body .main-destination .container .row .destination-content .destination-search {
   text-align: center;
   display: grid;
@@ -266,4 +295,59 @@ body .main-destination .slider-destination .slick-prev:before, body .main-destin
   opacity: 0.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body .main-news {
+  height: 1370px;
+}
+body .main-news .container .block-news {
+  height: 737px;
+  width: 1300px;
+  margin-bottom: 120px;
+  display: grid;
+  grid-template-columns: 72% 22.4%;
+  grid-auto-rows: 100%;
+  grid-gap: 75px;
+}
+body .main-news .container .block-news .news-block-1 {
+  display: inline-grid;
+  grid-template-columns: 61% 31%;
+  grid-template-rows: 62% 28%;
+  grid-gap: 75px;
+}
+body .main-news .container .block-news .news-block-1 img {
+  height: 100%;
+  width: 100%;
+}
+body .main-news .container .block-news .news-block-1 .grid-block img {
+  height: 210px;
+  width: 290px;
+}
+body .main-news .container .block-news .news-block-1 .grid-block-columns {
+  display: grid;
+  grid-template-columns: 49% 51%;
+}
+body .main-news .container .block-news .news-block-1 .grid-block-columns .grid-block-content-columns {
+  margin: 0 auto;
+  width: 73%;
+}
+body .main-news .container .block-news .news-block-1 .grid-block-columns .grid-block-content-columns .grid-block-content-logo {
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+body .main-news .container .block-news .news-block-1 .grid-block-columns img {
+  height: 205px;
+  width: 290px;
+}
+body .main-news .container .block-news .news-block-2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 28% 100%;
+  grid-row-gap: 75px;
+}
+body .main-news .container .block-news .news-block-2 img {
+  height: 210px;
+  width: 290px;
+}
+body .main-news .container .news-button {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

@@ -16,10 +16,23 @@
     margin-left: 50px;
     margin-right: 20px;
 }
+%content-style{
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 85px;
+}
+%text-logo-style{
+    font-size: 20px;
+                        
+    text-align: center;
+    margin-bottom: 70px;
+    color: #757575;
+}
 
 %main-logos-style{
     font-size: 50px;
     margin-bottom: 30px;
+    text-align: center;
     
 }
 
@@ -36,7 +49,31 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.grid-block-content{
+                                
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+    .grid-block-content-logo{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .grid-block-content-text{
+        font-size: 16px;
+        color: #757575;
+        line-height: 25px;
+    }
+}
+.grid-block-content-logo{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.grid-block-content-text{
+    font-size: 16px;
+    color: #757575;
+    line-height: 25px;
+}
 
 
 body{
@@ -297,9 +334,7 @@ body{
             .row{
                 .destination-content{
 
-                    margin: 0 auto;
-                    margin-top: 150px;
-                    margin-bottom: 85px;
+                    @extend %content-style;
 
                     .destination-logo{
                         @extend  %main-logos-style;
@@ -308,10 +343,7 @@ body{
                     }
                     .destination-text{
                         
-                        font-size: 20px;
-                        font-weight: 600;
-                        text-align: center;
-                        margin-bottom: 70px;
+                       @extend %text-logo-style
                     }
                     .destination-search{
                         text-align: center;
@@ -395,6 +427,98 @@ body{
 
     }
 
+    .main-news{
+        height: 1370px;
+        .container{
+          
+                .news-content{
+                    @extend %content-style;
+                    .news-logo{
+                        @extend %main-logos-style;
+                    }
+                    .news-text{
+                        @extend %text-logo-style;
+                        
+                    }
+                }
+                .block-news{
+                    height: 737px;
+                    width: 1300px;
+                    margin-bottom: 120px;
+                    display: grid;
+                    grid-template-columns: 72% 22.4%;
+                    grid-auto-rows: 100%;
+                    grid-gap: 75px;
+
+                    .news-block-1{
+                        
+                        display: inline-grid;
+                        grid-template-columns: 61% 31%;
+                        grid-template-rows: 62% 28%;
+                        
+                        grid-gap: 75px;
+                     
+                        img{
+                       
+                            height: 100%;
+                            width: 100%;
+                        }
+                        .grid-block{
+
+                            img{
+                                height: 210px;
+                                width: 290px;
+                            }
+                            
+                        }
+                        .grid-block-columns{
+                            display: grid;
+                            grid-template-columns: 49% 51%;
+                            .grid-block-content-columns{
+                                margin: 0 auto;
+                                width: 73%;
+                                .grid-block-content-logo{
+                                    margin-top: 8px;
+                                    margin-bottom: 15px;
+                                }
+                                
+                            }
+                            img{
+                                height: 205px;
+                                width: 290px;
+                            }
+                        }
+                    }
+
+                    .news-block-2{
+                        display: grid;
+                        grid-template-columns: 100%;
+                        grid-template-rows: 28% 100%;
+                        grid-row-gap: 75px;
+                        img{
+                            height: 210px;
+                            width: 290px;
+                        }
+                        
+                    }
+                   
+                }
+                .news-button{
+                    text-align: center;
+                    
+                    
+                    
+                    button{
+                        
+                      @extend  %button-style;
+                      
+                      
+                    }
+                }
+           
+        }
+        
+    }
 }
 
 
