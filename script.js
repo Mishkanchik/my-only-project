@@ -10,3 +10,9 @@ $('.slider-welcome').slick({
   $('.slider-destination').slick({
     autoplay:true,
   });
+
+  $('.slider-client').slick({
+    autoplay:false,
+    dots:true,
+    arrows:false,
+  });

@@ -12,6 +12,28 @@
     font-weight: bold;
     cursor: pointer;
 }
+%follow-contact-style{
+    background-image: url(icon/footer-twiter.png);
+    background-color: #616161;
+    background-position: center;
+    border: none;
+    border-radius: 50px;
+
+    height: 40px;
+    width: 40px;
+
+}
+%footer-content-logo-color{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+%footer-content-text-color{
+    color: #757575;
+    font-size: 16px;
+    line-height:25px;
+}
 [class*="slider-content-"]{
     margin-left: 50px;
     margin-right: 20px;
@@ -137,10 +159,9 @@ body{
       
         height: 850px;
         position: relative;
-        .container{
+
            
-            .row{
-                
+
                 .logo-content{
                     margin: 0 auto;
                     text-align: center;
@@ -164,8 +185,7 @@ body{
                             
                         }
                     }
-                }
-            }
+          
         }
         .watch-intro-video{
             width: 156px;
@@ -204,8 +224,6 @@ body{
         height: 950px;
         
 
-        .container{
-            .row{
                 .welcome-content{
 
                    
@@ -227,9 +245,8 @@ body{
                         line-height: 25px;
                         margin-bottom: 100px;
                     }
-                }
-               
-            }
+      
+
         }
 
         .slider-welcome{
@@ -330,8 +347,8 @@ body{
         
         height: 1345px;
 
-        .container{
-            .row{
+        
+       
                 .destination-content{
 
                     @extend %content-style;
@@ -360,8 +377,8 @@ body{
                         }
                         
                     }
-                }
-            }
+            
+     
         }
 
         .slider-destination{
@@ -428,8 +445,8 @@ body{
     }
 
     .main-news{
-        height: 1370px;
-        .container{
+        height: 1200px;
+        
           
                 .news-content{
                     @extend %content-style;
@@ -515,9 +532,166 @@ body{
                       
                     }
                 }
+        
+        
+    }
+    .main-client{
+        height: 950px;
+    
+        .client-content{
+            @extend %content-style;
+            .client-logo{
+                @extend %main-logos-style;
+            }
+            .client-text{
+                @extend %text-logo-style
+            }
+        }
+        .slider-client{
+            
+            height: 190px;
+            width: 790px;
+            margin: 0 auto;
+            padding-bottom: 380px;
+            
+            
+            .slider-client-content{
+                
+                display: grid;   
+                grid-template-columns: 180px 520px;
+                grid-column-gap:40px ;
+                line-height: 23px;
+                
+                img{
+                    height: 190px;
+                    width: 180px;
+                    border-radius: 10px;
+                }
+                .slider-client-content-text{
+                    font-size: 16px;
+                    color: #757575;
+                    .slider-client-name{
+                        color: #fbad27;
+                        font-weight: 600;
+                        margin-top: 40px;
+                        margin-bottom: 10px;
+                    }
+                    .slider-client-citys{
+                        font-size: 14px;
+                    }
+                }
+            }
            
+            
+
+            .slick-dots li button:before {
+              
+                content: "◉";
+                font-size:25px ;
+                color: #757575;
+                opacity: 1;
+              
+            }
+            .stick-active{
+                font-size: 35px;
+            }
+            .slick-dots li.slick-active button:before {
+                color: #fbad27;
+                font-size: 30px;
+                
+            }
+
         }
         
+    }
+    .footer{
+        height:  820px;
+        .orange-block{
+            height: 250px;
+            background-color: #fbad27;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            margin-bottom: 250px;
+            .footer-orange-block-content{
+
+                display: grid;
+                grid-template-columns: 780px 225px;
+                grid-column-gap: 295px;
+
+                .footer-orange-block-text{
+                    font-size: 40px;
+                    color: white;
+                    padding-top: 5px
+                }
+                .footer-orange-block-button{
+                    button{
+                        @extend %button-style;
+                        border: 2px solid white;
+                    }
+                }
+            }
+           
+        }
+        .footer-main{
+            height: 115px;
+            
+            .row-grid{
+                display: grid;
+                grid-template-columns: 100px repeat(3,200px);
+                grid-column-gap:200px ;
+
+               
+
+                    .footer-about-us-logo{
+                        @extend %footer-content-logo-color;
+                    }
+                    .footer-about-us-below-logo{
+                        @extend %footer-content-text-color;
+                        width: 80px;
+                    }
+
+                    .footer-address-logo{
+                        @extend %footer-content-logo-color;
+                    }
+                    .footer-address-below-logo{
+                        @extend %footer-content-text-color;
+                    }
+
+                    .footer-contact-us-logo{
+                        @extend %footer-content-logo-color;
+                    }
+                    .footer-contact-us-below-logo{
+                        @extend %footer-content-text-color;
+                    }
+                    .footer-follow-us-logo{
+                        @extend %footer-content-logo-color;
+                    }
+                    
+                   
+                   .twiter{
+                       
+                      @extend %follow-contact-style;
+                        margin-right: 10px
+                   }
+                   .facebook{
+                    @extend %follow-contact-style;
+                    margin-right: 10px;
+                    background-image: url(icon/footer-facebook.png);
+                   }
+                   .instagram{
+                       @extend %follow-contact-style;
+                       background-image: url(icon/icons8-instagram-старый-30.png);
+                       background-color: #fbad27;
+                   }
+            }
+            .footer-the-end{
+                font-size: 15px;
+                
+                margin-top: 120px;
+                color: #616161;
+                text-align: center;
+            }
+        }
     }
 }
 
