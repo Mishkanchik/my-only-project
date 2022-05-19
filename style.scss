@@ -674,6 +674,12 @@ body{
                         @extend %footer-content-text-color;
                         width: 80px;
                     }
+                    .footer-about-us-below-logo > a{
+
+                        text-decoration: none;
+                        color: #616161                        
+
+                    }
 
                     .footer-address-logo{
                         @extend %footer-content-logo-color;
@@ -687,6 +693,10 @@ body{
                     }
                     .footer-contact-us-below-logo{
                         @extend %footer-content-text-color;
+                    }
+                    .footer-contact-us-below-logo > a{
+                        text-decoration: none;
+                        color: #616161         
                     }
                     .footer-follow-us-logo{
                         @extend %footer-content-logo-color;
