@@ -20,6 +20,7 @@ body .footer .footer-main .row-grid .instagram, body .footer .footer-main .row-g
   background-position: center;
   border: none;
   border-radius: 50px;
+  cursor: pointer;
   height: 40px;
   width: 40px;
 }
@@ -70,10 +71,24 @@ body .main-client .client-content .client-logo, body .main-news .news-content .n
   display: flex;
 }
 
-.section-bg {
-  background-image: url(images/image1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+.intro {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.intro-media {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black url(images/image1.jpg) no-repeat 50% 50%;
+  background-size: cover;
 }
 
 .grid-block-content {
@@ -108,6 +123,7 @@ body {
 body .header {
   width: 100%;
   padding-top: 42px;
+  position: relative;
   color: #e5e5e5;
 }
 body .header .container .row {
@@ -123,13 +139,14 @@ body .header .container .row .col-4 .menu {
   display: flex;
 }
 body .header .container .row .col-4 .menu li {
+  color: #e5e5e5;
   margin-right: 30px;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
 }
 body .header .container .row .col-3 {
-  width: 15%;
+  width: 16%;
 }
 body .header .container .row .col-3 img {
   height: 15px;
@@ -159,6 +176,9 @@ body .main .logo-content .logo-text {
 }
 body .main .logo-content .logo-button {
   font-size: 16px;
+}
+body .main .logo-content .logo-button button:hover {
+  background-color: #d19121;
 }
 body .main .watch-intro-video {
   width: 156px;
@@ -374,6 +394,9 @@ body .main-news .block-news .news-block-2 img {
 body .main-news .news-button {
   text-align: center;
 }
+body .main-news .news-button button:hover {
+  background-color: #d19121;
+}
 body .main-client {
   height: 950px;
 }
@@ -443,6 +466,9 @@ body .footer .orange-block .footer-orange-block-content .footer-orange-block-tex
 body .footer .orange-block .footer-orange-block-content .footer-orange-block-button button {
   border: 2px solid white;
 }
+body .footer .orange-block .footer-orange-block-content .footer-orange-block-button button:hover {
+  background-color: #d19121;
+}
 body .footer .footer-main {
   height: 115px;
 }
@@ -457,12 +483,20 @@ body .footer .footer-main .row-grid .footer-about-us-below-logo {
 body .footer .footer-main .row-grid .twiter {
   margin-right: 10px;
 }
+body .footer .footer-main .row-grid .twiter:hover {
+  background-color: #fbad27;
+}
 body .footer .footer-main .row-grid .facebook {
   margin-right: 10px;
   background-image: url(icon/footer-facebook.png);
 }
+body .footer .footer-main .row-grid .facebook:hover {
+  background-color: #fbad27;
+}
 body .footer .footer-main .row-grid .instagram {
   background-image: url(icon/icons8-instagram-старый-30.png);
+}
+body .footer .footer-main .row-grid .instagram:hover {
   background-color: #fbad27;
 }
 body .footer .footer-main .footer-the-end {

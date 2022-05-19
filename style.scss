@@ -18,7 +18,7 @@
     background-position: center;
     border: none;
     border-radius: 50px;
-
+    cursor: pointer;
     height: 40px;
     width: 40px;
 
@@ -33,6 +33,7 @@
     color: #757575;
     font-size: 16px;
     line-height:25px;
+    
 }
 [class*="slider-content-"]{
     margin-left: 50px;
@@ -66,10 +67,23 @@
 .row{
     display: flex;
 }
-.section-bg{
-    background-image: url(images/image1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+.intro{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.intro-media{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black url(images/image1.jpg) no-repeat 50% 50%;
+    background-size: cover;
 }
 .grid-block-content{
                                 
@@ -102,26 +116,27 @@ body{
     font-family: 'Roboto', sans-serif;
 
     .header{
-
+      
         width: 100%;
         padding-top: 42px;
-       
+        position: relative;
         
         color:#e5e5e5 ;
         
      
         .container{
-
-    
+            
+            
             
             .row{
+                
                 display: flex;
                 justify-content: space-between;
                 border-bottom: 1px solid #8795a9;
                 height: 57px;
 
                 .col-4{
-
+                   
                     width: 50%;
 
                     .menu{
@@ -131,6 +146,7 @@ body{
                         
                         
                         li{
+                            color: #e5e5e5;
                             margin-right: 30px;
                             display:inline-block;
                             font-size: 16px;
@@ -140,7 +156,7 @@ body{
                     }
                 }
                 .col-3{
-                    width: 15%;
+                    width: 16%;
                     img{
 
                         height: 15px;
@@ -183,6 +199,9 @@ body{
                         button{
                             @extend %button-style
                             
+                        }
+                        button:hover{
+                            background-color: #d19121;
                         }
                     }
           
@@ -531,6 +550,9 @@ body{
                       
                       
                     }
+                    button:hover{
+                        background-color: #d19121;
+                    }
                 }
         
         
@@ -628,6 +650,9 @@ body{
                         @extend %button-style;
                         border: 2px solid white;
                     }
+                    button:hover{
+                        background-color: #d19121;
+                    }
                 }
             }
            
@@ -665,23 +690,34 @@ body{
                     }
                     .footer-follow-us-logo{
                         @extend %footer-content-logo-color;
+                        
                     }
+                   
                     
                    
                    .twiter{
-                       
+                    
                       @extend %follow-contact-style;
                         margin-right: 10px
+                   }
+                   .twiter:hover{
+                    background-color: #fbad27;
                    }
                    .facebook{
                     @extend %follow-contact-style;
                     margin-right: 10px;
                     background-image: url(icon/footer-facebook.png);
                    }
+                   .facebook:hover{
+                    background-color: #fbad27;
+                   }
                    .instagram{
                        @extend %follow-contact-style;
                        background-image: url(icon/icons8-instagram-старый-30.png);
-                       background-color: #fbad27;
+                       
+                   }
+                   .instagram:hover{
+                    background-color: #fbad27;
                    }
             }
             .footer-the-end{
